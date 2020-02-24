@@ -1,0 +1,64 @@
+/**************************/
+/***** GLOBAL STYLES ******/
+/**************************/
+body {
+  background-color: pink;
+  margin: 0;
+  font-size: 16px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+/* Typography */
+.section__title {
+
+}
+
+/**************************/
+/***** SECTIONS ******/
+/**************************/
+/* Header Section */
+.logo {
+
+}
+
+/* Navigation */
+.nav {
+
+}
+
+.nav__list {
+
+}
+
+.nav__item {
+
+}
+
+.nav__link {
+
+}
+
+
+/* Intro Section */
+.intro {
+
+}
+
+
+
+.section__title--intro {
+
+}
+
+
+/* Services Section */
+.my-services {
+
+}
+
+.section__title--services {
+
+}
+
+/* About Section */
