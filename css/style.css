@@ -82,7 +82,6 @@ strong { font-weight: var(--fw-bold); }
   transform: scale(1.1);
 }
 
-
 /* Typography */
 h1, h2, h3 {
   line-height: 1;
@@ -93,17 +92,11 @@ h1 {font-size: var(--fs-h1);}
 h2 {font-size: var(--fs-h2);}
 h3 {font-size: var(--fs-h3);}
 
-.section__title {
-  margin-bottom: .25em;
-}
+.section__title {margin-bottom: .25em;}
 
-.section__title--intro {
-  font-weight: var(--fw-reg);
-}
+.section__title--intro {font-weight: var(--fw-reg);}
 
-.section__title--intro strong {
-  display: block;
-}
+.section__title--intro strong {display: block;}
 
 .section__subtitle {
   margin:0;
@@ -118,32 +111,25 @@ h3 {font-size: var(--fs-h3);}
   padding: .25em 1em;
 }
 
+.section__subtitle--work {
+  color: var(--clr-accent);
+  font-weight: var(--fw-bold);
+  margin-bottom: 2em;
+}
 
 /**************************/
 /******* SECTIONS ********/
 /**************************/
 /* Header Section */
-.logo {
-
-}
 
 /* Navigation */
-nav {
-  display: none;
-}
+nav {display: none;}
 
-.nav__list {
+.nav__list {}
 
-}
+.nav__item {}
 
-.nav__item {
-
-}
-
-.nav__link {
-
-}
-
+.nav__link {}
 
 /* Intro Section */
 .intro {
@@ -232,3 +218,89 @@ nav {
 }
 
 /* About Section */
+.about-me {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-me__img {
+  box-shadow: var (--bs);
+}
+
+@media (min-width: 600px) {
+  .about-me {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    grid-template-areas:
+      "title img"
+      "subtitle img"
+      "text img";
+    grid-column-gap: 2em;
+  }
+
+  .section__title--about {
+    grid-area: title;
+  }
+
+ .section__subtitle--about {
+   grid-column: 1 / -1;
+   grid-row: 2;
+   position: relative;
+   left: -1em;
+   width: calc(100% + 2em);
+   padding-left: 1em;
+   padding-right: calc(200px + 4em);
+ }
+
+  .about-me__img {
+    grid-area: img;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+/* My Work Section  */
+
+.my-work {
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+  text-align: center;
+}
+
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.portfolio__item {
+  background: var(--clr-accent);
+  overflow: hidden;
+}
+
+.portfolio__img {
+  transition:
+    transform 750ms cubic-bezier(.5, 0, .5, 1),
+    opacity 250ms linear;
+}
+
+.portfolio__item: focus {
+  position: relative;
+  z-index: 2;
+}
+
+.portfolio__img:hover,
+.portfolio__item:focus .portfolio__img {
+  transform: scale(1.2);
+  opacity: .75;
+}
+
+/* Footer Section */
+
+.footer__link {}
+
+.social-list {}
+
+.social-list__item {}
+
+.social-list__link {}
